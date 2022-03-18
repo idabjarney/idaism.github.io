@@ -1,0 +1,117 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$leftB: #c6d8ff;
+$rightB: rgba(30, 29, 34, 0.856);
+$bgColour: rgb(255, 252, 249);
+$third: rgb(255, 92, 92);
+
+header {
+    @include flexCenter();
+
+    background-color: $bgColour;
+    height: 100vh;
+
+    .inner {
+        display: flex;
+        width: 800px;
+        height: 700px;
+        border-radius: 15px;
+        .leftBox {
+            display: flex;
+            justify-content: left;
+            height: 100%;
+            min-width: 230px;
+            max-width: 230px;
+            background-color: $leftB;
+            margin-right: 5px;
+            border-radius: 15px 0 0 15px;
+
+        }
+        .rightBox {
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+            background-color: $rightB;
+            border-radius: 0px 15px 15px 0px;
+            .image {
+                border-radius: 100%;
+                padding: 5px;
+                width: 240px;
+                height: 240px;
+                background-color: $bgColour;
+                transform: translate(-128px, 100px);
+                &::after {
+                    content: '';
+                    display: block;
+                    margin: auto;
+                    border: solid 5px $third;
+                    width: 60px;
+                    height: 100px;
+                    border-radius: 20px;
+                    transform: translate(60px, -60px);
+                }
+                img {
+                    position: relative;
+                    
+                    border-radius: 100%;
+                    width: 100%;
+                    
+    
+                }
+
+            } 
+            .rightColumn {
+                
+                .text {
+                    text-align: left;
+                    transform: translate(250px, 0);
+                    color: $bgColour;
+                    h1 {
+                        font-weight: 400;
+                        letter-spacing: 10px;
+                        font-size: 80px;
+                        span {
+                            color: $third;
+                            font-weight: 600;
+                        }
+                    }
+
+                }
+                nav {
+                    .buttons {
+                        list-style: none;
+                        transform: translate(170px, 50px);
+                        li {
+                            padding: 5px;
+                            background-color: $bgColour;
+                            &:nth-child(2){
+                                margin: 30px 0;
+                            }
+                            a {
+                                display: block;
+                                width: 170px;
+                                height: 40px;
+                                background-color: $rightB;
+                                text-decoration: none;
+                                border-radius: 0 15px 15px 0;
+                                color: #ffffff;
+                                text-align: center;
+                                font-size: 27px;
+                                transition: 400ms;
+                                &:hover {
+                                    background-color: $third;
+                                }
+                            
+                            }
+                        }
+                    }
+                }
+            }    
+        }
+    }
+}
