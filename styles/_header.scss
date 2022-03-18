@@ -1,18 +1,12 @@
-@mixin flexCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-$leftB: #c6d8ff;
-$rightB: rgba(30, 29, 34, 0.856);
-$bgColour: rgb(255, 252, 249);
-$third: rgb(255, 92, 92);
 
 header {
-    @include flexCenter();
-
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
     background-color: $bgColour;
+    background-image: url(/images/tactile_noise.png);
     height: 100vh;
 
     .inner {
@@ -23,41 +17,96 @@ header {
         .leftBox {
             display: flex;
             justify-content: left;
+            position: relative;
             height: 100%;
             min-width: 230px;
             max-width: 230px;
             background-color: $leftB;
-            margin-right: 5px;
+            background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
+            margin-right: 10px;
             border-radius: 15px 0 0 15px;
+            .socials {
+                display: flex;
+                position: relative;
+                flex-direction: row;
+                margin-top: auto;
+                list-style-type: none;
+                width: 100%;
+                padding-top: 10px;
+                border-top: solid 10px $bgColour;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    height: 170px;
+                    width: 90px;
+                    border: solid 10px $third;
+                    border-bottom-left-radius: 25px;
+                    border-right: none;
+                    border-top: none;
+                    left: 0;
+                    transform: translate(-25px, -90px);
 
+                    top: 0;
+                    right: 0;
+                    
+                    transform-origin: center left;
+                }
+                li {
+                    &:nth-child(even) {
+                        padding: 0 10px;
+                    }
+                    a {
+                        color: $rightB;
+                        transition: 400ms; 
+                        font-size: 30px;
+                        cursor: pointer;
+                        &:hover {
+                            color: $third;
+                        }
+                        i {
+
+                        }
+                    }
+                }
+            }
         }
         .rightBox {
             display: flex;
             justify-content: space-between;
             height: 100%;
-            width: 100%;
+            width: 100%;background-color: #4f4f51;
+            background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
             background-color: $rightB;
             border-radius: 0px 15px 15px 0px;
             .image {
+                position: relative;
                 border-radius: 100%;
-                padding: 5px;
+                padding: 10px;
                 width: 240px;
                 height: 240px;
                 background-color: $bgColour;
                 transform: translate(-128px, 100px);
                 &::after {
                     content: '';
+                    position: absolute;
                     display: block;
-                    margin: auto;
-                    border: solid 5px $third;
-                    width: 60px;
-                    height: 100px;
-                    border-radius: 20px;
-                    transform: translate(60px, -60px);
+                    height: 280px;
+                    width: 140px;
+                    border: solid 10px $third;
+                    border-left: none;
+                    border-top-right-radius: 285px;
+                    border-bottom-right-radius: 285px;
+                    top: 0;
+                    right: 0;
+                    transform: translate(14%, -7%) rotate(20deg);
+                    transform-origin: center left;
+                    
+
+                    
                 }
                 img {
                     position: relative;
-                    
                     border-radius: 100%;
                     width: 100%;
                     
@@ -70,7 +119,7 @@ header {
                 .text {
                     text-align: left;
                     transform: translate(250px, 0);
-                    color: $bgColour;
+                    color: $font1;
                     h1 {
                         font-weight: 400;
                         letter-spacing: 10px;
@@ -84,13 +133,15 @@ header {
                 }
                 nav {
                     .buttons {
+                        display: inline-block;
                         list-style: none;
                         transform: translate(170px, 50px);
                         li {
-                            padding: 5px;
-                            background-color: $bgColour;
+                            box-shadow: 6px 11px 16px 0px rgba(0,0,0,0.75);
+                            border-radius: 0 15px 15px 0;
+                            overflow: hidden;
                             &:nth-child(2){
-                                margin: 30px 0;
+                                margin: 50px 0;
                             }
                             a {
                                 display: block;
@@ -98,13 +149,14 @@ header {
                                 height: 40px;
                                 background-color: $rightB;
                                 text-decoration: none;
-                                border-radius: 0 15px 15px 0;
-                                color: #ffffff;
+
+                                color: $font1;
                                 text-align: center;
                                 font-size: 27px;
                                 transition: 400ms;
                                 &:hover {
                                     background-color: $third;
+                                    width: 270px;
                                 }
                             
                             }

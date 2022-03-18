@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: 'Source Sans Pro';
   font-weight: 300;
-  color: #f7d4df;
+  color: red;
 }
 
 header {
@@ -13,10 +13,12 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #fffcf9;
+  background-color: #2c2b30;
+  background-image: url(/images/tactile_noise.png);
   height: 100vh;
 }
 
@@ -36,12 +38,65 @@ header .inner .leftBox {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
+  position: relative;
   height: 100%;
   min-width: 230px;
   max-width: 230px;
-  background-color: #c6d8ff;
-  margin-right: 5px;
+  background-color: #f2c4ce;
+  background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
+  margin-right: 10px;
   border-radius: 15px 0 0 15px;
+}
+
+header .inner .leftBox .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: auto;
+  list-style-type: none;
+  width: 100%;
+  padding-top: 10px;
+  border-top: solid 10px #2c2b30;
+}
+
+header .inner .leftBox .socials::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 170px;
+  width: 90px;
+  border: solid 10px #f58f67;
+  border-bottom-left-radius: 25px;
+  border-right: none;
+  border-top: none;
+  left: 0;
+  -webkit-transform: translate(-25px, -90px);
+          transform: translate(-25px, -90px);
+  top: 0;
+  right: 0;
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+
+header .inner .leftBox .socials li:nth-child(even) {
+  padding: 0 10px;
+}
+
+header .inner .leftBox .socials li a {
+  color: #4f4f51;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+header .inner .leftBox .socials li a:hover {
+  color: #f58f67;
 }
 
 header .inner .rightBox {
@@ -53,30 +108,39 @@ header .inner .rightBox {
           justify-content: space-between;
   height: 100%;
   width: 100%;
-  background-color: rgba(30, 29, 34, 0.856);
+  background-color: #4f4f51;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+  background-color: #4f4f51;
   border-radius: 0px 15px 15px 0px;
 }
 
 header .inner .rightBox .image {
+  position: relative;
   border-radius: 100%;
-  padding: 5px;
+  padding: 10px;
   width: 240px;
   height: 240px;
-  background-color: #fffcf9;
+  background-color: #2c2b30;
   -webkit-transform: translate(-128px, 100px);
           transform: translate(-128px, 100px);
 }
 
 header .inner .rightBox .image::after {
   content: '';
+  position: absolute;
   display: block;
-  margin: auto;
-  border: solid 5px #ff5c5c;
-  width: 60px;
-  height: 100px;
-  border-radius: 20px;
-  -webkit-transform: translate(60px, -60px);
-          transform: translate(60px, -60px);
+  height: 280px;
+  width: 140px;
+  border: solid 10px #f58f67;
+  border-left: none;
+  border-top-right-radius: 285px;
+  border-bottom-right-radius: 285px;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(14%, -7%) rotate(20deg);
+          transform: translate(14%, -7%) rotate(20deg);
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
 }
 
 header .inner .rightBox .image img {
@@ -89,7 +153,7 @@ header .inner .rightBox .rightColumn .text {
   text-align: left;
   -webkit-transform: translate(250px, 0);
           transform: translate(250px, 0);
-  color: #fffcf9;
+  color: #d6d6d6;
 }
 
 header .inner .rightBox .rightColumn .text h1 {
@@ -99,33 +163,35 @@ header .inner .rightBox .rightColumn .text h1 {
 }
 
 header .inner .rightBox .rightColumn .text h1 span {
-  color: #ff5c5c;
+  color: #f58f67;
   font-weight: 600;
 }
 
 header .inner .rightBox .rightColumn nav .buttons {
+  display: inline-block;
   list-style: none;
   -webkit-transform: translate(170px, 50px);
           transform: translate(170px, 50px);
 }
 
 header .inner .rightBox .rightColumn nav .buttons li {
-  padding: 5px;
-  background-color: #fffcf9;
+  -webkit-box-shadow: 6px 11px 16px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 6px 11px 16px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 0 15px 15px 0;
+  overflow: hidden;
 }
 
 header .inner .rightBox .rightColumn nav .buttons li:nth-child(2) {
-  margin: 30px 0;
+  margin: 50px 0;
 }
 
 header .inner .rightBox .rightColumn nav .buttons li a {
   display: block;
   width: 170px;
   height: 40px;
-  background-color: rgba(30, 29, 34, 0.856);
+  background-color: #4f4f51;
   text-decoration: none;
-  border-radius: 0 15px 15px 0;
-  color: #ffffff;
+  color: #d6d6d6;
   text-align: center;
   font-size: 27px;
   -webkit-transition: 400ms;
@@ -133,6 +199,7 @@ header .inner .rightBox .rightColumn nav .buttons li a {
 }
 
 header .inner .rightBox .rightColumn nav .buttons li a:hover {
-  background-color: #ff5c5c;
+  background-color: #f58f67;
+  width: 270px;
 }
 /*# sourceMappingURL=index.css.map */
