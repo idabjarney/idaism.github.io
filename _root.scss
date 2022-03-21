@@ -9,3 +9,40 @@ $bgColour: #2c2b30;
 $leftB: #f2c4ce;
 $third: #f58f67;
 $font1: #d6d6d6;
+
+
+@keyframes spin {
+    0% {
+        transform: translate(14%, -7%) rotate(20deg);
+    }
+    100% {
+        transform: translate(14%, -7%) rotate(380deg);
+    }
+}
+@keyframes slide {
+    0% {
+        width: 0px;
+        height: 100px;
+        border-right: none;
+        border-bottom: none;
+    }
+    30% {
+        width: 0px;
+        height: 0px;
+        border-right: none;
+        border-bottom: none;
+    }
+    70% {
+        width: 170px;
+        height: 0px;
+        border-right: none;
+        border-bottom: none;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+        border-right: none;
+        border-bottom: none;
+
+    }
+}
