@@ -23,54 +23,56 @@
 @-webkit-keyframes slide {
   0% {
     width: 0px;
-    height: 100px;
-    border-right: none;
-    border-bottom: none;
-  }
-  30% {
-    width: 0px;
     height: 0px;
-    border-right: none;
-    border-bottom: none;
+    border: solid 5px #f2c4ce;
   }
-  70% {
+  25% {
     width: 170px;
     height: 0px;
-    border-right: none;
-    border-bottom: none;
+    border: solid 5px #f2c4ce;
+  }
+  50% {
+    width: 0px;
+    height: 0px;
+    border: solid 5px #f2c4ce;
+  }
+  75% {
+    width: 0px;
+    height: 100px;
+    border: solid 5px #f2c4ce;
   }
   100% {
     width: 0px;
     height: 0px;
-    border-right: none;
-    border-bottom: none;
+    border: solid 5px #f2c4ce;
   }
 }
 
 @keyframes slide {
   0% {
     width: 0px;
-    height: 100px;
-    border-right: none;
-    border-bottom: none;
-  }
-  30% {
-    width: 0px;
     height: 0px;
-    border-right: none;
-    border-bottom: none;
+    border: solid 5px #f2c4ce;
   }
-  70% {
+  25% {
     width: 170px;
     height: 0px;
-    border-right: none;
-    border-bottom: none;
+    border: solid 5px #f2c4ce;
+  }
+  50% {
+    width: 0px;
+    height: 0px;
+    border: solid 5px #f2c4ce;
+  }
+  75% {
+    width: 0px;
+    height: 100px;
+    border: solid 5px #f2c4ce;
   }
   100% {
     width: 0px;
     height: 0px;
-    border-right: none;
-    border-bottom: none;
+    border: solid 5px #f2c4ce;
   }
 }
 
@@ -246,15 +248,14 @@ header .inner .rightBox .rightColumn .text::after {
   width: 170px;
   height: 100px;
   border: solid 10px #f2c4ce;
-  border-top-left-radius: 25px;
   border-right: none;
   border-bottom: none;
   bottom: 0;
   left: 0;
   -webkit-transform: translate(-30px, -100px);
           transform: translate(-30px, -100px);
-  -webkit-animation: slide 2s linear infinite;
-          animation: slide 2s linear infinite;
+  -webkit-animation: slide 7s ease-in-out infinite;
+          animation: slide 7s ease-in-out infinite;
 }
 
 header .inner .rightBox .rightColumn .text h1 {

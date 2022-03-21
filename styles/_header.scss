@@ -131,13 +131,12 @@ header {
                         width: 170px;
                         height: 100px;
                         border: solid 10px $leftB;
-                        border-top-left-radius: 25px;
                         border-right: none;
                         border-bottom: none;
                         bottom: 0;
                         left: 0;
                         transform: translate(-30px, -100px);
-                        animation: slide 2s linear infinite;
+                        animation: slide 7s ease-in-out infinite;
                         
                         
                     }

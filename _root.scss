@@ -22,27 +22,29 @@ $font1: #d6d6d6;
 @keyframes slide {
     0% {
         width: 0px;
-        height: 100px;
-        border-right: none;
-        border-bottom: none;
-    }
-    30% {
-        width: 0px;
         height: 0px;
-        border-right: none;
-        border-bottom: none;
+        border: solid 5px $leftB;
     }
-    70% {
+    25% {
         width: 170px;
         height: 0px;
-        border-right: none;
-        border-bottom: none;
+        border: solid 5px $leftB;
+        
+    }
+    50% {
+        width: 0px;
+        height: 0px;
+        border: solid 5px $leftB;
+    }
+    75% {
+        width: 0px;
+        height: 100px;
+        border: solid 5px $leftB;
+
     }
     100% {
         width: 0px;
         height: 0px;
-        border-right: none;
-        border-bottom: none;
-
+        border: solid 5px $leftB;
     }
 }
