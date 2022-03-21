@@ -124,61 +124,54 @@ header .inner .leftBox {
   background-image: url("https://www.transparenttextures.com/patterns/otis-redding.png");
   margin-right: 10px;
   border-radius: 15px 0 0 15px;
-}
-
-header .inner .leftBox .socials {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-top: auto;
-  list-style-type: none;
-  width: 100%;
-  padding-top: 10px;
-  border-top: solid 10px #2c2b30;
-  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.65);
-  z-index: 2;
-}
-
-header .inner .leftBox .socials::after {
-  content: '';
-  position: absolute;
-  display: block;
-  height: 170px;
-  width: 90px;
-  border: solid 10px #f58f67;
-  border-bottom-left-radius: 25px;
-  border-right: none;
-  border-top: none;
-  left: 0;
-  -webkit-transform: translate(-25px, -90px);
-          transform: translate(-25px, -90px);
-  z-index: -1;
-  top: 0;
-  right: 0;
-  -webkit-transform-origin: center left;
-          transform-origin: center left;
-}
-
-header .inner .leftBox .socials li:nth-child(even) {
-  padding: 0 50px;
-}
-
-header .inner .leftBox .socials li a {
-  color: #f2c4ce;
-  -webkit-transition: 400ms;
-  transition: 400ms;
-  font-size: 30px;
-  cursor: pointer;
-  z-index: 3;
-}
-
-header .inner .leftBox .socials li a:hover {
-  color: #f58f67;
+  /*
+            .socials {
+                display: flex;
+                position: relative;
+                flex-direction: row;
+                margin-top: auto;
+                list-style-type: none;
+                width: 100%;
+                padding-top: 10px;
+                border-top: solid 10px $bgColour;
+                text-shadow: 0px 2px 3px rgba(0,0,0,0.65);
+                z-index: 2;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    height: 170px;
+                    width: 90px;
+                    border: solid 10px $third;
+                    border-bottom-left-radius: 25px;
+                    border-right: none;
+                    border-top: none;
+                    left: 0;
+                    transform: translate(-25px, -90px);
+                    z-index: -1;
+                    top: 0;
+                    right: 0;
+                    
+                    transform-origin: center left;
+                }
+                li {
+                    &:nth-child(even) {
+                        padding: 0 0px;
+                    }
+                    a {
+                        color: $leftB;
+                        transition: 400ms; 
+                        font-size: 30px;
+                        cursor: pointer;
+                        z-index: 3;
+                        &:hover {
+                            color: $third;
+                            
+                        }
+                    }
+                }
+            }
+            */
 }
 
 header .inner .rightBox {
@@ -198,7 +191,7 @@ header .inner .rightBox {
 }
 
 header .inner .rightBox .image {
-  position: relative;
+  position: absolute;
   border-radius: 100%;
   padding: 10px;
   width: 240px;
@@ -234,6 +227,61 @@ header .inner .rightBox .image img {
   width: 100%;
 }
 
+header .inner .rightBox .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: auto;
+  list-style-type: none;
+  width: 300px;
+  padding-top: 10px;
+  border-top: solid 10px #2c2b30;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.65);
+  z-index: 2;
+}
+
+header .inner .rightBox .socials::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 170px;
+  width: 90px;
+  border: solid 10px #f58f67;
+  border-bottom-left-radius: 25px;
+  border-right: none;
+  border-top: none;
+  left: 0;
+  -webkit-transform: translate(-45px, -80px);
+          transform: translate(-45px, -80px);
+  z-index: -1;
+  top: 0;
+  right: 0;
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+
+header .inner .rightBox .socials li:nth-child(even) {
+  padding: 0 20px;
+}
+
+header .inner .rightBox .socials li a {
+  color: #f2c4ce;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+header .inner .rightBox .socials li a:hover {
+  color: #f58f67;
+}
+
 header .inner .rightBox .rightColumn .text {
   text-align: left;
   -webkit-transform: translate(250px, 0);
@@ -253,8 +301,8 @@ header .inner .rightBox .rightColumn .text::after {
   border-bottom: none;
   bottom: 0;
   left: 0;
-  -webkit-transform: translate(-30px, -100px);
-          transform: translate(-30px, -100px);
+  -webkit-transform: translate(-30px, -95px);
+          transform: translate(-30px, -95px);
   -webkit-animation: slide 7s ease-in-out infinite;
           animation: slide 7s ease-in-out infinite;
 }
@@ -301,6 +349,7 @@ header .inner .rightBox .rightColumn nav .buttons li a {
   color: #d6d6d6;
   text-align: center;
   font-size: 27px;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.65);
   -webkit-transition: 400ms;
   transition: 400ms;
 }
