@@ -140,6 +140,7 @@ header .inner .leftBox .socials {
   width: 100%;
   padding-top: 10px;
   border-top: solid 10px #2c2b30;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.65);
   z-index: 2;
 }
 
@@ -164,11 +165,11 @@ header .inner .leftBox .socials::after {
 }
 
 header .inner .leftBox .socials li:nth-child(even) {
-  padding: 0 10px;
+  padding: 0 50px;
 }
 
 header .inner .leftBox .socials li a {
-  color: #4f4f51;
+  color: #f2c4ce;
   -webkit-transition: 400ms;
   transition: 400ms;
   font-size: 30px;
@@ -262,6 +263,7 @@ header .inner .rightBox .rightColumn .text h1 {
   font-weight: 400;
   letter-spacing: 10px;
   font-size: 80px;
+  text-shadow: 0px 6px 9px rgba(0, 0, 0, 0.75);
 }
 
 header .inner .rightBox .rightColumn .text h1 span {
