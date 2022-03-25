@@ -10,8 +10,12 @@ body {
         right: 0;
         top: 0;
         background: $font1;
-        animation: whiteDown 1.2s ease-in;
+        animation: whiteDown 1.2s ease-out;
         
         z-index: 2;
+
+        @media screen and (max-width: 925px) {
+            width: 50%;
+        }
     }
 }

@@ -212,9 +212,15 @@ body .whiteBg {
   right: 0;
   top: 0;
   background: #d6d6d6;
-  -webkit-animation: whiteDown 1.2s ease-in;
-          animation: whiteDown 1.2s ease-in;
+  -webkit-animation: whiteDown 1.2s ease-out;
+          animation: whiteDown 1.2s ease-out;
   z-index: 2;
+}
+
+@media screen and (max-width: 925px) {
+  body .whiteBg {
+    width: 50%;
+  }
 }
 
 header {
@@ -447,8 +453,8 @@ header .inner .rightBox .rightColumn .text::after {
   border-bottom: none;
   bottom: 0;
   left: 0;
-  -webkit-transform: translate(-30px, -95px);
-          transform: translate(-30px, -95px);
+  -webkit-transform: translate(-25px, -95px);
+          transform: translate(-25px, -95px);
   -webkit-animation: slide 7s ease-in-out infinite;
           animation: slide 7s ease-in-out infinite;
 }
@@ -514,5 +520,131 @@ header .inner .rightBox .rightColumn nav .buttons li:hover a {
           box-shadow: inset 170px 0 0 0 #cfcfcf;
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
+}
+
+@media screen and (max-width: 1220px) {
+  header .inner {
+    width: 500px;
+    height: 580px;
+  }
+  header .inner .leftBox {
+    min-width: 150px;
+    max-width: 150px;
+    margin-right: 7px;
+  }
+  header .inner .rightBox .image {
+    height: 160px;
+    width: 160px;
+    padding: 7px;
+    -webkit-transform: translate(-90px, 100px);
+            transform: translate(-90px, 100px);
+  }
+  header .inner .rightBox .image::after {
+    height: 190px;
+    width: 95px;
+    border: solid 7px #f58f67;
+    border-left: none;
+  }
+  header .inner .rightBox .socials li a {
+    font-size: 25px;
+  }
+  header .inner .rightBox .rightColumn .text {
+    -webkit-transform: translate(203px, 40px);
+            transform: translate(203px, 40px);
+  }
+  header .inner .rightBox .rightColumn .text::after {
+    width: 110px;
+    height: 20px;
+    -webkit-transform: translate(-19px, -70px);
+            transform: translate(-19px, -70px);
+    border: solid 3px #f58f67;
+    -webkit-animation: slide2 7s ease-in-out infinite;
+            animation: slide2 7s ease-in-out infinite;
+  }
+  @-webkit-keyframes slide2 {
+    0% {
+      width: 0px;
+      height: 0px;
+    }
+    25% {
+      width: 130px;
+      height: 0px;
+    }
+    50% {
+      width: 0px;
+      height: 0px;
+    }
+    75% {
+      width: 0px;
+      height: 75px;
+    }
+    100% {
+      width: 0px;
+      height: 0px;
+    }
+  }
+  @keyframes slide2 {
+    0% {
+      width: 0px;
+      height: 0px;
+    }
+    25% {
+      width: 130px;
+      height: 0px;
+    }
+    50% {
+      width: 0px;
+      height: 0px;
+    }
+    75% {
+      width: 0px;
+      height: 75px;
+    }
+    100% {
+      width: 0px;
+      height: 0px;
+    }
+  }
+  header .inner .rightBox .rightColumn .text h1 {
+    font-size: 60px;
+    text-shadow: 0px 3px 7px rgba(0, 0, 0, 0.75);
+  }
+  header .inner .rightBox .rightColumn nav .buttons li {
+    width: 130px;
+    height: 32px;
+  }
+  header .inner .rightBox .rightColumn nav .buttons li a {
+    font-size: 22px;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.65);
+  }
+  header .inner .rightBox .rightColumn nav .buttons li:hover {
+    width: 220px;
+  }
+  header .inner .rightBox .rightColumn nav .buttons li:hover a {
+    background-color: #f58f67;
+    color: #313133;
+    -webkit-box-shadow: inset 137px 0 0 0 #cfcfcf;
+            box-shadow: inset 137px 0 0 0 #cfcfcf;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  header {
+    padding-left: 15px;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  header .inner .rightBox {
+    width: 60%;
+  }
+  header .inner .rightBox .rightColumn .text {
+    -webkit-transform: translate(0px, 40px);
+            transform: translate(0px, 40px);
+  }
+  header .inner .rightBox .rightColumn nav .buttons {
+    -webkit-transform: translate(-30px, 50px);
+            transform: translate(-30px, 50px);
+  }
 }
 /*# sourceMappingURL=index.css.map */
