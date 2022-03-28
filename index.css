@@ -331,7 +331,6 @@ header .inner .rightBox {
   height: 100%;
   width: 100%;
   background-color: #4f4f51;
-  background-color: #4f4f51;
   background-image: url("https://www.transparenttextures.com/patterns/navy.png");
   background-color: #313133;
   border-radius: 0px 15px 15px 0px;
@@ -645,6 +644,144 @@ header .inner .rightBox .rightColumn nav .buttons li:hover a {
   header .inner .rightBox .rightColumn nav .buttons {
     -webkit-transform: translate(-30px, 50px);
             transform: translate(-30px, 50px);
+  }
+}
+
+@media screen and (max-width: 670px) {
+  header {
+    padding: 0;
+  }
+  header .inner {
+    width: 100%;
+    height: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 10px;
+  }
+  header .inner .leftBox {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-animation: none;
+            animation: none;
+    min-width: 100%;
+    max-width: 100%;
+    height: 20%;
+    border-radius: 15px 15px 15px 15px;
+    margin: 10px 0;
+  }
+  header .inner .rightBox {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 15px 15px 15px 15px;
+    -webkit-animation: none;
+            animation: none;
+    margin-top: auto;
+    height: 60%;
+    width: 100%;
+  }
+  header .inner .rightBox .image {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-animation: none;
+            animation: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: translateY(-270px);
+            transform: translateY(-270px);
+  }
+  header .inner .rightBox .socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 0;
+    margin-top: auto;
+    width: auto;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  header .inner .rightBox .socials li {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  header .inner .rightBox .socials li:nth-child(even) {
+    margin: 0 40px;
+  }
+  header .inner .rightBox .socials li a {
+    font-size: 30px;
+  }
+  header .inner .rightBox .rightColumn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    z-index: 3;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .inner .rightBox .rightColumn .text {
+    text-align: center;
+    -webkit-transform: none;
+            transform: none;
+    -webkit-animation: none;
+            animation: none;
+  }
+  header .inner .rightBox .rightColumn .text h1 {
+    margin: 0;
+  }
+  header .inner .rightBox .rightColumn nav .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transform: none;
+            transform: none;
+    padding: 0;
+    margin: 0 5px;
+  }
+  header .inner .rightBox .rightColumn nav .buttons li {
+    width: 100%;
+    height: 50px;
+    pointer-events: none !important;
+  }
+  header .inner .rightBox .rightColumn nav .buttons li a {
+    height: 50px;
+    border-radius: 10px 10px 10px 10px;
   }
 }
 /*# sourceMappingURL=index.css.map */

@@ -7,7 +7,7 @@ header {
     align-items: center;
     background-color: $bgColour;
     background-image: url("https://www.transparenttextures.com/patterns/navy.png");
-    height: 100vh;
+   height: 100vh;
     padding-right: 300px;
 
     .inner {
@@ -87,7 +87,7 @@ header {
             display: flex;
             justify-content: space-between;
             height: 100%;
-            width: 100%;background-color: #4f4f51;
+            width: 100%;
             background-color: #4f4f51;
             background-image: url("https://www.transparenttextures.com/patterns/navy.png");
             background-color: $rightB;
@@ -384,8 +384,104 @@ header {
         }
     }
     @media screen and (max-width: 670px) {
+        padding: 0;
         .inner {
+            width: 100%;
+            height: 100%;
+            flex-wrap: wrap;
+            margin: 10px;
             
+            .leftBox {
+                align-items: flex-start;
+                justify-content: start;
+                flex-direction: column;
+                animation: none;
+                min-width: 100%;
+                max-width: 100%;
+                height: 20%;
+                border-radius: 15px 15px 15px 15px;
+                margin: 10px 0;
+            }
+            .rightBox {
+                align-items: center;
+                justify-content: flex-start;
+                flex-direction: column;
+                border-radius: 15px 15px 15px 15px;
+                animation: none;
+                margin-top: auto;
+                height: 60%;
+                width: 100%;
+                .image {
+                    
+                    transform: none;
+                    animation: none;
+                    display: flex;
+                    transform: translateY(-270px);
+                    
+                    
+                }
+                .socials {
+                    display: flex;
+                    justify-content: flex-end;
+                    padding: 0;
+                    margin-top: auto;
+                    width: auto;
+                    order: 2;
+                    
+                    li {
+                        align-items: flex-end;
+                        &:nth-child(even) {
+                            margin: 0 40px;
+                        }
+                        a{
+                            font-size: 30px;
+                        }
+                    }
+
+                    
+                }
+                .rightColumn {
+                    display: flex;
+                    width: 100%;
+                    z-index: 3;
+                    justify-content: flex-start;
+                    order: 1;
+                    
+                    flex-direction: column;
+                    .text {
+                        text-align: center;
+                        transform: none;
+                        animation: none;
+                        h1 {
+                            margin: 0;
+                        }
+                    }
+                    nav {
+                        .buttons {
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            transform: none;
+                            padding: 0;
+                            margin: 0 5px;
+                            
+                            li {
+                                width: 100%;
+                                height: 50px;
+                                pointer-events: none !important;
+                                a {
+                                    height: 50px;
+                                    border-radius: 10px 10px 10px 10px;
+                                    
+                                }
+                                
+                            }
+                        }
+
+                    }
+                }
+
+            }
         }
     }
 }
